@@ -48,34 +48,40 @@
 
                 <main class="relative z-10 inline-block w-full" style="margin-top: 63px">
                     <div class="px-8 xl:px-32 py-16 inline-block w-full mx-auto">
-                        <span class="inline-block w-full text-left font-semibold mb-2 leading-tight uppercase opacity-50 text-sm">
-                            Coming Soon
-                        </span>
+                        <div class="inline-block w-1/35">
+                            <span class="inline-block w-full text-left font-semibold mb-2 leading-tight uppercase opacity-50 text-sm">
+                                Coming Soon
+                            </span>
 
-                        <h1 class="inline-block w-full text-left text-4xl font-semibold mb-4 leading-tight">
-                            The mission suite<br />for Arma communities.
-                        </h1>
+                            <h1 class="inline-block w-full text-left text-4xl font-semibold mb-4 leading-tight">
+                                The mission suite<br />for Arma communities.
+                            </h1>
 
-                        <div class="inline-block w-1/3 text-left text-lg font-medium mb-8 opacity-75 leading-loose">
-                            Take your community to the next level with <strong>automated mission testing</strong>, intel, discussions, media, forums, applications, and a swish landing page to attract new members.
-                        </div>
+                            <div class="inline-block w-full text-left text-lg font-medium mb-8 opacity-75 leading-loose">
+                                Take your community to the next level with <strong>automated mission testing</strong>, intel, discussions, media, forums, applications, and a swish landing page to attract new members.
+                            </div>
 
-                        <signup>
-                            <div slot-scope="{ signup, inputAttrs, inputEvents, error, complete }" class="inline-block w-full text-left">
-                                <div v-if="!complete">
-                                    <input type="email" v-bind="inputAttrs" v-on="inputEvents" class="rounded-full signup-email w-auto mr-4 float-left text-center no-outline" placeholder="johndoe@example.com">
-                                    <button class="btn btn-hero btn-xl btn-primary" @click.prevent="signup">Sign Up</button>
-                                    <span class="inline-block w-full text-sm mt-2 text-brand font-medium">@{{ error }}</span>
-                                </div>
+                            <signup>
+                                <div slot-scope="{ signup, inputAttrs, inputEvents, error, complete }" class="inline-block w-full text-left">
+                                    <div v-if="!complete">
+                                        <input type="email" v-bind="inputAttrs" v-on="inputEvents" class="rounded-full signup-email w-auto mr-4 float-left text-center no-outline" placeholder="johndoe@example.com">
+                                        <button class="btn btn-hero btn-xl btn-primary" @click.prevent="signup">Sign Up</button>
+                                        <span class="inline-block w-full text-sm mt-2 text-brand font-medium">@{{ error }}</span>
+                                    </div>
 
-                                <div v-else>
-                                    <div class="inline-block w-full text-brand">
-                                        <div class="float-left mr-4">@svg('tick')</div>
-                                        <span class="font-medium">Thanks for signing up!</span>
+                                    <div v-else>
+                                        <div class="inline-block w-full text-brand">
+                                            <div class="float-left mr-4">@svg('tick')</div>
+                                            <span class="font-medium">Thanks for signing up!</span>
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
-                        </signup>
+                            </signup>
+                        </div>
+
+                        <div class="inline-block w-3/5 pl-8 float-right">
+                            <img class="rounded-xl" src="{{ url('/images/product.png') }}">
+                        </div>
 
                         <grid id="features" class="mt-18" thirds gap="3rem" auto-rows="max-content">
                             <div>
@@ -308,6 +314,11 @@
                                         <div class="inline-block w-full">
                                             <div class="float-left mr-4 text-brand">@svg('tick')</div>
                                             <span class="font-medium">Group landing page</span>
+                                        </div>
+
+                                        <div class="inline-block w-full">
+                                            <div class="float-left mr-4 text-brand">@svg('tick')</div>
+                                            <span class="font-medium">Custom domain name</span>
                                         </div>
 
                                         <div class="inline-block w-full">
